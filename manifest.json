@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "bilibili直播收益助手",
+  "version": "1.0.0",
+  "description": "允许用户查询B站直播间一段时间内的礼物收益，并提供数据分析功能",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://link.bilibili.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://link.bilibili.com/p/center/index*"],
+      "js": ["content.js"],
+      "css": ["styles/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*", "styles/*"],
+      "matches": ["https://link.bilibili.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+} 
