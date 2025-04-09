@@ -3,11 +3,7 @@
   "name": "bilibili直播收益助手",
   "version": "1.0.0",
   "description": "允许用户查询B站直播间一段时间内的礼物收益，并提供数据分析功能",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "downloads"
-  ],
+  "permissions": [],
   "host_permissions": [
     "https://link.bilibili.com/*"
   ],
